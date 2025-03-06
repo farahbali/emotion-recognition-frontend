@@ -1,26 +1,47 @@
 import React, { useState } from "react";
 import ImageUpload from "./components/ImageUpload";
-import './App.css'; 
+import { FaSmile, FaUpload, FaInfoCircle } from "react-icons/fa"; // Icons for a professional look
+import './App.css';
 
 function App() {
   const [prediction, setPrediction] = useState("");
 
   return (
     <div className="app-container">
+      {/* Header */}
       <header className="app-header">
-        <h1>Emotion Detection</h1>
-        <p>Upload an image to detect the emotion.</p>
+        <h1>Emotion Detection AI</h1>
+        <p>Upload an image to detect the emotion using advanced AI technology.</p>
+        <div className="header-icons">
+          <FaSmile className="icon" />
+          <FaUpload className="icon" />
+        </div>
       </header>
+
+      {/* Main Content */}
       <main className="app-main">
-        <ImageUpload setPrediction={setPrediction} />
+        <div className="upload-section">
+          <h2>Upload Your Image</h2>
+          <p>Supported formats: JPG, PNG, JPEG.</p>
+          <ImageUpload setPrediction={setPrediction} />
+        </div>
+
         {prediction && (
           <div className="prediction-result">
-            <h2>Émotion détectée : {prediction}</h2>
+            <h2>Detected Emotion: <span className="emotion">{prediction}</span></h2>
+            <p className="feedback-text">How accurate was the prediction? Let us know!</p>
           </div>
         )}
       </main>
+
+      {/* Footer */}
       <footer className="app-footer">
-        <p>© 2023 Emotion Detection App. All rights reserved.</p>
+        <div className="footer-content">
+          <p>© 2023 Emotion Detection AI. All rights reserved.</p>
+          <p>
+            <FaInfoCircle className="icon" /> Powered by AI and Machine Learning.
+          </p>
+        </div>
       </footer>
     </div>
   );

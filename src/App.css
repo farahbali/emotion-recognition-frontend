@@ -1,8 +1,10 @@
+/* General Styles */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Poppins', sans-serif; /* Modern font */
     background-color: #f4f4f9;
     color: #333;
+    line-height: 1.6;
   }
   
   .app-container {
@@ -16,9 +18,9 @@ body {
   
   /* Header Styles */
   .app-header {
-    background-color: #6200ea;
+    background: linear-gradient(135deg, #6200ea, #3700b3); /* Gradient background */
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
     width: 100%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
@@ -26,28 +28,64 @@ body {
   .app-header h1 {
     margin: 0;
     font-size: 2.5rem;
+    font-weight: 600;
   }
   
   .app-header p {
     margin: 10px 0 0;
     font-size: 1.2rem;
+    opacity: 0.9;
   }
   
-
+  .header-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  .header-icons .icon {
+    font-size: 1.5rem;
+    color: #ffffff;
+    opacity: 0.8;
+  }
+  
+  /* Main Content Styles */
   .app-main {
     flex: 1;
-    padding: 20px;
+    padding: 40px 20px;
     max-width: 800px;
     width: 100%;
-    margin-top: 10%;
+    margin-top: 5%;
+  }
+  
+  .upload-section {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+  
+  .upload-section h2 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+    color: #6200ea;
+  }
+  
+  .upload-section p {
+    margin: 0 0 20px;
+    font-size: 1rem;
+    color: #666;
   }
   
   .prediction-result {
     margin-top: 20px;
-    padding: 15px;
-    background-color: #ffffff;
-    border-radius: 8px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
   }
   
   .prediction-result h2 {
@@ -55,21 +93,55 @@ body {
     font-size: 1.8rem;
     color: #6200ea;
   }
-
+  
+  .prediction-result .emotion {
+    color: #ff4081; /* Highlight the detected emotion */
+    font-weight: 600;
+  }
+  
+  .feedback-text {
+    margin: 10px 0 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Footer Styles */
   .app-footer {
-    background-color: #333;
+    background: #333;
     color: white;
-    padding: 10px;
+    padding: 20px;
     width: 100%;
     text-align: center;
   }
   
-  .app-footer p {
-    margin: 0;
-    font-size: 0.9rem;
+  .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
   }
   
-
+  .footer-content p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+  
+  .footer-content .icon {
+    margin-right: 5px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design */
   @media (max-width: 768px) {
     .app-header h1 {
       font-size: 2rem;
@@ -77,6 +149,10 @@ body {
   
     .app-header p {
       font-size: 1rem;
+    }
+  
+    .upload-section h2 {
+      font-size: 1.5rem;
     }
   
     .prediction-result h2 {
