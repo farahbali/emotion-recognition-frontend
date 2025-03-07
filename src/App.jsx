@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ImageUpload from "./components/ImageUpload";
-import { FaSmile, FaUpload, FaInfoCircle } from "react-icons/fa"; // Icons for a professional look
+import { FaSmile, FaUpload, FaInfoCircle } from "react-icons/fa"; 
 import './App.css';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="app-container">
-      {/* Header */}
+
       <header className="app-header">
         <h1>Emotion Detection AI</h1>
         <p>Upload an image to detect the emotion using advanced AI technology.</p>
@@ -17,8 +17,6 @@ function App() {
           <FaUpload className="icon" />
         </div>
       </header>
-
-      {/* Main Content */}
       <main className="app-main">
         <div className="upload-section">
           <h2>Upload Your Image</h2>
@@ -34,7 +32,7 @@ function App() {
         )}
       </main>
 
-      {/* Footer */}
+
       <footer className="app-footer">
         <div className="footer-content">
           <p>© 2023 Emotion Detection AI. All rights reserved.</p>
