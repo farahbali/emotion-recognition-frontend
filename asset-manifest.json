@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/emotion-recognition-frontend/static/css/main.52e9d8e1.css",
-    "main.js": "/emotion-recognition-frontend/static/js/main.52e49bd9.js",
+    "main.js": "/emotion-recognition-frontend/static/js/main.22685914.js",
     "index.html": "/emotion-recognition-frontend/index.html",
     "main.52e9d8e1.css.map": "/emotion-recognition-frontend/static/css/main.52e9d8e1.css.map",
-    "main.52e49bd9.js.map": "/emotion-recognition-frontend/static/js/main.52e49bd9.js.map"
+    "main.22685914.js.map": "/emotion-recognition-frontend/static/js/main.22685914.js.map"
   },
   "entrypoints": [
     "static/css/main.52e9d8e1.css",
-    "static/js/main.52e49bd9.js"
+    "static/js/main.22685914.js"
   ]
 }
